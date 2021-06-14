@@ -1,1 +1,1 @@
-# credit-card-checker
+# Simple JavaScript for Credits Card Validation
