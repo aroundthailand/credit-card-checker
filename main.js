@@ -23,7 +23,9 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
 
-// Add your functions below:
+// Luhn algorithm to check vaild credit card
+// @param array of credit card digits
+// @return bool
 const validateCred = creditCardsArray => {
     let sum = 0;
 
@@ -45,9 +47,12 @@ const validateCred = creditCardsArray => {
     return false;
 }
 
-console.log(validateCred(valid2));
+// Debug
+// console.log(validateCred(valid2));
 
-
+// Function for batch cards checking
+// @param nested arrays with cards number
+// @return array
 const findInvalidCards = cardsArray => {
     let invaildCardsArray = [];
 
@@ -60,8 +65,12 @@ const findInvalidCards = cardsArray => {
     return invaildCardsArray;
 }
 
-console.log(findInvalidCards(batch));
+// Debug
+// console.log(findInvalidCards(batch));
 
+// Function to determine invalid cards companies
+// @param array of invalid cards numbers
+// @return array of unique names of companies
 const idInvalideCardCompanies = cardsArray => {
     let companiesArray = {
         3: "Amex (American Express)", 
