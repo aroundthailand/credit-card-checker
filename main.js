@@ -84,6 +84,10 @@ const idInvalideCardCompanies = cardsArray => {
     for(card in cardsArray) {
         if(companiesArray[card[0]] && !invalidCompaniesCard.includes(companiesArray[card[0]])) {
             invalidCompaniesCard.push(companiesArray[card[0]]);
+        } else {
+            if (!invalidCompaniesCard.includes("Company not found.")) {
+                invalidCompaniesCard.push("Company not found.");
+            }
         }
     }
 
